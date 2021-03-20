@@ -29,8 +29,8 @@ class MyApp extends StatelessWidget {
       ),
       home:
       AnnotatedRegion<SystemUiOverlayStyle>(
-        value: //defaultM(),
-        defaultT(context),
+        value: defaultM(),
+        //defaultT(context),
         child: Scaffold(
           //resizeToAvoidBottomInset: false,
           body: MyContainer2(),
@@ -42,26 +42,12 @@ class MyApp extends StatelessWidget {
 }
 
 SystemUiOverlayStyle defaultM(){
-  bool noAppBar = true;
-
-  bool invertStatusIcons = true;
-
-  bool isDark = true;
-
-  Brightness? myStatusBarBrightness;
   var st = SystemUiOverlayStyle(
-    statusBarColor: null,
-    statusBarIconBrightness: myStatusBarBrightness == null
-        ? noAppBar
-        ? (isDark ? Brightness.dark : Brightness.light)
-        : null
-        :myStatusBarBrightness,
+    statusBarColor: Colors.transparent,
+    statusBarIconBrightness: Brightness.dark,
     systemNavigationBarColor: Colors.transparent.withOpacity(0.002),
-    systemNavigationBarIconBrightness:
-    isDark ? Brightness.light : Brightness.dark,
-//systemNavigationBarColor: Colors.yellowAccent,
-//systemNavigationBarDividerColor:Colors.yellowAccent,
-    //systemNavigationBarIconBrightness: Brightness.dark,
+    systemNavigationBarDividerColor:Colors.transparent,
+    systemNavigationBarIconBrightness: Brightness.dark,
   );
   return st;
 }
@@ -116,16 +102,16 @@ class MyContainer extends StatelessWidget{
 }
 
 class MyContainer2 extends StatelessWidget {
-  String version = "Q";
+  String version = "R";
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
-      Container(color: Colors.black,),
+      Container(color: Colors.yellow,),
       Positioned(child: Align(
         alignment: Alignment.center,
         child: Text(version,
         style: TextStyle(
-          color: Colors.white,
+          color: Colors.black,
           fontSize: 100,
         ),),
       ))
