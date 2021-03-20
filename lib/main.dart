@@ -105,17 +105,20 @@ class MyContainer2 extends StatelessWidget {
   String version = "R";
   @override
   Widget build(BuildContext context) {
-    return Stack(children: [
-      Container(color: Colors.yellow,),
-      Positioned(child: Align(
-        alignment: Alignment.center,
-        child: Text(version,
-        style: TextStyle(
-          color: Colors.black,
-          fontSize: 100,
-        ),),
-      ))
-    ],);
+    return Visibility(
+      visible: true,
+      child: Stack(children: [
+        Container(color: Colors.yellow,),
+        Positioned(child: Align(
+          alignment: Alignment.center,
+          child: Text(version,
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 100,
+          ),),
+        ))
+      ],),
+    );
   }
 }
 
