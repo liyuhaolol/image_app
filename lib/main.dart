@@ -106,7 +106,7 @@ class MyContainer2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Visibility(
-      visible: false,
+      visible: true,
       child: Stack(children: [
         Container(color: Colors.yellow,),
         Positioned(child: Align(
