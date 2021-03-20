@@ -68,7 +68,7 @@ SystemUiOverlayStyle defaultM(){
 
 SystemUiOverlayStyle defaultT(BuildContext context){
   var st = FlexColorScheme.themedSystemNavigationBar(context,
-    opacity: 0.002,
+    opacity: 1,
   systemNavigationBarColor: Colors.deepPurple,
   systemNavigationBarDividerColor: Colors.deepPurple, );
   return st;
@@ -116,7 +116,7 @@ class MyContainer extends StatelessWidget{
 }
 
 class MyContainer2 extends StatelessWidget {
-  String version = "R";
+  String version = "Q";
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
