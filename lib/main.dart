@@ -53,12 +53,12 @@ SystemUiOverlayStyle defaultM(){
     statusBarColor: null,
     statusBarIconBrightness: myStatusBarBrightness == null
         ? noAppBar
-        ? invertStatusIcons
         ? (isDark ? Brightness.dark : Brightness.light)
-        : (isDark ? Brightness.light : Brightness.dark)
         : null
         :myStatusBarBrightness,
     systemNavigationBarColor: Colors.transparent.withOpacity(0.002),
+    systemNavigationBarIconBrightness:
+    isDark ? Brightness.light : Brightness.dark,
 //systemNavigationBarColor: Colors.yellowAccent,
 //systemNavigationBarDividerColor:Colors.yellowAccent,
     //systemNavigationBarIconBrightness: Brightness.dark,
