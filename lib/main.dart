@@ -28,12 +28,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
       ),
       home:
-      AnnotatedRegion<SystemUiOverlayStyle>(
-        value: defaultM(),
-        //defaultT(context),
-        child: Scaffold(
-          //resizeToAvoidBottomInset: false,
-          body: MyContainer2(),
+      Visibility(
+        visible: true,
+        child: AnnotatedRegion<SystemUiOverlayStyle>(
+          value: defaultM(),
+          //defaultT(context),
+          child: Scaffold(
+            backgroundColor: Colors.lightGreen,
+            //resizeToAvoidBottomInset: false,
+            body: MyContainer2(),
+          ),
         ),
       ),
       //MyContainer2(),
@@ -106,7 +110,7 @@ class MyContainer2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Visibility(
-      visible: true,
+      visible: false,
       child: Stack(children: [
         Container(color: Colors.yellow,),
         Positioned(child: Align(
